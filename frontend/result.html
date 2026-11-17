@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نتیجه تست شخصیت شناسی</title>
+    <link rel="stylesheet" href="./src/style.css">
+  
+</head>
+
+<body class="bg-gray-200 min-h-screen font-danamedium">
+
+  <div class=" max-w-6xl mx-auto p-4 md:p-6 space-y-4 ">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+      <button
+        class="flex items-center gap-2 px-4 py-2 rounded-xl panel-2 text-sm text-gray-200 hover:bg-[#252140] transition">
+        <span>دانلود نتیجه</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
+        </svg>
+      </button>
+      <div class="flex items-center gap-3">
+        <h1 class="text-lg md:text-xl font-bold text-black">نتیجه تست شخصیت شناسی</h1>
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: var(--purple);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M3 3v18h18M7 15l4-4 3 3 5-6" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="panel rounded-2xl p-6 md:p-8 shadow-2xl! bg-panel-result ">
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+
+        <!-- Avatar -->
+        <div class="relative shrink-0">
+          <div class="w-44 h-44 rounded-full flex items-center justify-center"
+            style="background: radial-gradient(circle, rgba(214, 170, 76, 0.35), transparent 70%);">
+            <div class="text-7xl select-none">
+              
+            </div>
+          </div>
+          <div class="absolute -top-1 -left-3 w-9 h-9 rounded-full panel-2 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2">
+              <path
+                d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+            </svg>
+          </div>
+          <div class="absolute top-6 -right-4 w-9 h-9 rounded-full panel-2 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
+              <path d="M23 6l-9.5 9.5-5-5L1 18" />
+            </svg>
+          </div>
+          <div class="absolute bottom-2 right-0 w-9 h-9 rounded-full panel-2 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="12" cy="12" r="0.5" fill="#f87171" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="flex-1 text-center md:text-right ">
+          <p class="text-sm text-gray-400 mb-1">تیپ شخصیتی شما</p>
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-orange-300" " id="personalityTitel"></h2>
+            <div class="w-10 h-10 rounded-full flex items-center justify-center"
+              style="background: rgba(216,171,82,0.15);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--gold)">
+                <path d="M5 16L3 6l5 4 4-6 4 6 5-4-2 10H5zm0 2h14v2H5z" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-gray-300 leading-8 mb-6 max-w-2xl" id="personalityDescription">
+
+          </p>
+          <p class="text-sm text-gray-400 mb-3">نقاط قوت شما:</p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-2" id="strengths">
+            <span class="tag-pill px-4 py-1.5 rounded-full text-sm flex items-center gap-1"> <span>›</span></span>
+            <span class="tag-pill px-4 py-1.5 rounded-full text-sm flex items-center gap-1"> <span>›</span></span>
+            <span class="tag-pill px-4 py-1.5 rounded-full text-sm"> </span>
+            <span class="tag-pill px-4 py-1.5 rounded-full text-sm"> </span>
+            <span class="tag-pill px-4 py-1.5 rounded-full text-sm"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Suggested Jobs -->
+    <div class="panel rounded-2xl p-6 bg-panel-result shadow-2xl!">
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: var(--purple);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" />
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg text-gray-300">مشاغل پیشنهادی برای شما</h3>
+        </div>
+        <div class="flex gap-2 ">
+          <button id="scrollRight"
+            class="w-8 h-8 rounded-full panel-2 flex items-center justify-center hover:bg-[#252140] transition text-text-result">‹</button>
+          <button id="scrollLeft"
+            class="w-8 h-8 rounded-full panel-2 flex items-center justify-center hover:bg-[#252140] transition text-text-result">›</button>
+        </div>
+      </div>
+
+      <div id="jobRow" class="flex items-center  justify-center gap-4 overflow-x-auto scroll-row  p-5 text-gray-400">
+        <!-- Job Card 1 -->
+
+        <!-- Job Card 3 -->
+
+      </div>
+    </div>
+
+    <!-- Learning Path -->
+    <div class="panel rounded-2xl p-6 bg-panel-result shadow-2xl!">
+      <div id="stageTitle" class="flex items-center gap-2 mb-1 text-text-result">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--purple-2)" stroke-width="2">
+          <path d="M2 4h6a4 4 0 014 4v12a3 3 0 00-3-3H2zM22 4h-6a4 4 0 00-4 4v12a3 3 0 013-3h7z" />
+        </svg>
+        <h3 id="pathTitle" class="font-bold text-lg text-gray-300"></h3>
+      </div>
+      <p class="text-sm text-gray-400 mb-6">این مسیر یادگیری در ۳ مرحله طراحی شده تا شما را از مبتدی به حرفه‌ای برساند.
+      </p>
+
+      <div class="flex flex-col lg:flex-row gap-6">
+        <!-- Stages sidebar -->
+        <div id="learningSteps" class="lg:w-64 shrink-0 space-y-3">
+          <div class="stage-item flex gap-3 cursor-pointer" data-stage="1">
+            <div class="flex flex-col items-center">
+              <div
+                class="num-circle active w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0 text-text-result">
+                1</div>
+              <div class="dash-line w-px flex-1 my-1"></div>
+            </div>
+            <div class="stage-box rounded-xl p-3 mb-3 flex-1 stage-active">
+              <p  class="text-xs text-gray-300 mb-1">مرحله ۱</p>
+              <p class="font-bold text-gray-300 text-sm mb-1">مقدماتی</p>
+              <p id="stageDesc" class="text-xs text-gray-300 leading-5"></p>
+            </div>
+          </div>
+          <div class="stage-item flex gap-3 cursor-pointer" data-stage="2">
+            <div class="flex flex-col items-center">
+              <div class="num-circle w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0 text-text-result">2
+              </div>
+              <div class="dash-line w-px flex-1 my-1"></div>
+            </div>
+            <div class="stage-box panel-2 rounded-xl p-3 mb-3 flex-1">
+              <p class="text-xs text-gray-400 mb-1">مرحله ۲</p>
+              <p class="font-bold text-sm mb-1 text-gray-300">مهارت‌های کلیدی</p>
+              <p  class="text-xs text-gray-400 leading-5">یادگیری مهارت‌های ضروری و تکنیک‌های پیشرفته</p>
+            </div>
+          </div>
+          <div class="stage-item flex gap-3 cursor-pointer" data-stage="3">
+            <div class="flex flex-col items-center">
+              <div class="num-circle w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shrink-0 text-text-result">3
+              </div>
+            </div>
+            <div class="stage-box panel-2 rounded-xl p-3 flex-1">
+              <p class="text-xs text-gray-400 mb-1">مرحله ۳</p>
+              <p class="font-bold text-sm mb-1 text-gray-300">پروژه و اجرا</p>
+              <p class="text-xs text-gray-400 leading-5">اجرای پروژه واقعی و کسب تجربه عملی</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video panel -->
+        <div class=" w-full">
+          
+          <div id="videoBox">
+          <div class="mb-1">
+            <p id="stageTitele" class="font-bold text-purple-300 mb-2 "></p>
+            <p id="stageDesc" class="text-sm text-gray-400 mb-4"></p>
+          </div>
+
+          <div class="flex gap-2 mb-4">
+            <button class="video_tab tab-btn px-4 py-2 rounded-lg text-sm  flex-1 text-text-result hover:cursor-pointer" data-video="1">ویدیو 1</button>
+            <button class="video_tab tab-btn px-4 py-2 rounded-lg text-sm  flex-1 text-text-result hover:cursor-pointer active " data-video="2">ویدیو 2</button>
+            <button class="video_tab tab-btn px-4 py-2 rounded-lg text-sm  flex-1 text-text-result hover:cursor-pointer" data-video="3">ویدیو3</button>
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden mb-4"
+            style="background: linear-gradient(135deg, #241f47, #1a1533); aspect-ratio: 16/8;">
+            <iframe id="videoFrame" class="w-full rounded-xl" height="420" src="" frameborder="0" allowfullscreen
+              webkitallowfullscreen mozallowfullscreen> </iframe>
+
+          </div>
+
+          <h4 id="videoTitle" class="font-bold mb-2 text-text-result"> </h4>
+          <p id="videoDesc" class="text-sm text-gray-400 leading-6 mb-4"></p>
+          <p class="text-sm text-gray-400 mb-4">مدت زمان: <span id="videoDuration">۱۲:۴۵</span></p>
+
+          <button class="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium"
+            style="background: var(--purple-2);">
+            <span>مشاهده ویدیو بعدی</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M19 12H5m7-7l-7 7 7 7" />
+            </svg>
+          </button>
+          </div>
+          <div id="skillsBox" class="hidden flex-1">
+           <div class="mb-1">
+            <p id="stageTitele" class="font-bold text-purple-300 mb-2 "></p>
+            <p id="stageDesc" class="text-sm text-gray-400 mb-4"></p>
+          </div>
+
+          
+            <div class="flex gap-2 mb-4">
+            <button class="skill_tab px-4 py-2 rounded-lg text-sm flex-1  text-text-result hover:cursor-pointer tab-btn " data-skill="1">مهارت ها</button>
+            <button class="skill_tab px-4 py-2 rounded-lg text-sm  flex-1 text-text-result hover:cursor-pointer  tab-btn  " data-skill="2"> ابزار ها</button>
+            <button class="skill_tab px-4 py-2 rounded-lg text-sm  flex-1 text-text-result hover:cursor-pointer tab-btn " data-skill="3"> بازار کار</button>
+             <button class="skill_tab px-4 py-2 rounded-lg text-sm flex-1 text-text-result hover:cursor-pointer tab-btn " data-skill="4">  مدت زمان</button>
+             <button class="skill_tab px-4 py-2 rounded-lg text-sm flex-1 text-text-result hover:cursor-pointer tab-btn " data-skill="4"> نقشه راه</button>
+          
+          </div>
+
+          <div id="skilleContnt" class="text-text-result">
+          <div class=" relative rounded-xl overflow-hidden mb-4 text-text-result">
+            
+          </div>
+    </div>
+         
+
+          
+          
+         
+          </div>
+        </div>
+        
+        
+          
+        </div>
+      </div>
+
+      <div class="panel rounded-2xl p-5 flex items-center gap-3 bg-panel-result">
+      <p class="text-sm text-gray-300 flex-1 leading-6">
+        توصیه می‌شود مراحل را به ترتیب دنبال کنید و پس از اتمام هر مرحله، تمرین‌های مرتبط را انجام دهید.
+      </p>
+      <span class="font-bold text-text-result">نکته</span>
+      <div class="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
+        style="background: rgba(216,171,82,0.15);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--gold)">
+          <path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18.2 22 12 18l-6.2 4 1.7-7.6L2 9.6l7.1-.7z" />
+        </svg>
+      </div>
+    </div>
+    </div>
+
+    <!-- Tip -->
+    
+
+  </div>
+
+
+  <script src="./js/jobsData.js"></script>
+  <script src="./js/result.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

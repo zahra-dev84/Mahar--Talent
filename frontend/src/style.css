@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* fonts */
+
+@font-face {
+  font-family: vazir;
+  src: url(../public/font/Vazir-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: vazir-bold;
+  src: url(../public/font/Vazir-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: vazir-light;
+  src: url(../public/font/Vazir-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: vazir-medium;
+  src: url(../public/font/Vazir-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: logo;
+  src: url(../public/font/Serbie.otf);
+}
+
+@font-face {
+  font-family: morabaa;
+  src: url(../public/font/fonts/Morabba/woff2/Morabba-Bold.woff2) format('woff');
+}
+
+@font-face {
+  font-family: morabbamedium;
+  src: url(../public/font/fonts/Morabba/woff2/Morabba-Light.woff2) format('woff');
+}
+
+@font-face {
+  font-family: danamedium;
+  src: url(../public/font/fonts/Dana/woff2/DanaFaNum-Medium.woff2);
+}
+
+:root {
+  
+      --purple: #F97316;
+      --purple-2: #F97316;
+      --gold: #F97316;
+      --text: #f2f1f8;
+      --muted: #a6a2c3;
+    
+}
+
+@theme {
+  --font-vzir: "vazir";
+  --font-vazirbold: "vazir-bold";
+  --font-vazirlight: "vazir-light";
+  --font-vazirmedium: "vazir-medium";
+  --font-logo: "logo";
+  --font-morabbaBold: "morabaa";
+  --font-morabbamedium: "morabbamedium";
+  --font-danamedium: "danamedium";
+
+  --color-primery: #1E293B;
+  --color-secendry: #F97316;
+  --color-success: #F8FAFC;
+  --tracking-1: "-0.068em";
+
+  --color-bg-result:#0d0b1a;
+  --color-panel-result:#171429;
+  --color-panel2-result:#1d1a35;
+    --color-border-result:#2b2748;
+  --color-purple-result:#F97316;
+    --color-purple2-result:#F97316;
+  --color-gold-result:#F97316;
+  --color-text-result:#f2f1f8;
+
+
+
+}
+
+
+
+@layer utilities {
+  .bg-parallax-hero {
+    background-image: url('../public/assests/images/pic3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@layer components {
+  .submenu {
+    @apply hidden flex-col gap-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white/20;
+  }
+
+  .menu-open {
+    @apply flex;
+  }
+
+  .overlay {
+    @apply md:hidden fixed invisible opacity-0 inset-0 w-full h-full bg-black/40 z-10 transition-all;
+  }
+
+  .overlay--visible {
+    @apply visible opacity-100;
+  }
+
+  .panel {
+      background: var(--color-bg-result);
+     border:1px solid var(--color-border-result);
+    }
+
+    .panel-2 {
+      background: var(--color-panel2-result);
+      border: 1px solid var(--color-border-result);
+    }
+
+    .tag-pill {
+      background: rgba(109, 76, 214, 0.15);
+      border: 1px solid rgba(109, 76, 214, 0.4);
+     color: #cabdfb;
+    }
+
+    .stage-active {
+      background: linear-gradient(135deg, var(--color-purple-result), var(--color-panel-result));
+      border-color: var(--color-panel2-result);
+    }
+
+    .num-circle {
+      background: var(--color-panel2-result);
+      border: 2px solid var(--color-border-result);
+    }
+
+    .num-circle.active {
+      background: var(--color-panel2-result);
+      border-color: var(--color-panel2-result);
+    }
+
+    .dash-line {
+      background-image: linear-gradient(to bottom, var(--color-border-result) 50%, transparent 50%);
+      background-size: 2px 10px;
+      background-repeat: repeat-y;
+    }
+    .tab-btn{
+      background: var(--color-panel2-result);
+    }
+    .tab-btn.active {
+      background: var(--color-purple-result) !important;
+      color: red ;
+    }
+
+    .job-card {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .scroll-row {
+      scroll-behavior: smooth;
+    }
+
+    .fade-in {
+      animation: fadeIn .35s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    ::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-border-result);
+      border-radius: 4px;
+    }
+}
+
+@utility container {
+  @apply mx-auto px-4 lg:px-2.5;
+}
